@@ -21,9 +21,4 @@ public class MainManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-    private void Update()
-    {
-
-    }
 }
