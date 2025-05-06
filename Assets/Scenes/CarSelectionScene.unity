@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I want an eloquent, intelligent car
+  m_text: I want to talk to an eloquent, intelligent car
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 5
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 968364199}
   - component: {fileID: 968364198}
   - component: {fileID: 968364197}
+  - component: {fileID: 968364201}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -440,6 +441,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &968364201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968364196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a23f079f4e924046b15383507e45008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fatButton: {fileID: 1109778930}
+  intelligentButton: {fileID: 1108859983}
+  kindButton: {fileID: 1423280711}
+  cars: []
 --- !u!1 &987415372
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I WANT A BIG, FAT, MACHO CAR
+  m_text: GIMME THE BIG, FAT, MACHO CAR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -576,6 +593,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987415372}
   m_CullTransparentMesh: 1
+--- !u!1 &988920338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988920339}
+  - component: {fileID: 988920340}
+  m_Layer: 0
+  m_Name: MainManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &988920339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988920338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 469.6558, y: 339.88394, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988920340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988920338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d472059008f5e064c8f6450487029af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedCar: {fileID: 0}
+  cars:
+  - {fileID: 104122, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+  - {fileID: 126218, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
+  - {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+  - {fileID: 178130, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
+  - {fileID: 118600, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
 --- !u!1 &1108859981
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +1020,7 @@ GameObject:
   - component: {fileID: 1423280712}
   - component: {fileID: 1423280711}
   m_Layer: 5
-  m_Name: Female Car
+  m_Name: Kind Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1639,7 +1707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I want a kind, empathetic car
+  m_text: I<b><u> need</b></u> to talk to a kind, empathetic car
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1727,3 +1795,4 @@ SceneRoots:
   - {fileID: 1470609133}
   - {fileID: 968364200}
   - {fileID: 284980367}
+  - {fileID: 988920339}
