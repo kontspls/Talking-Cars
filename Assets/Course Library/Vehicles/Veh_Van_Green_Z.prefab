@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 7470611027228714114}
   - component: {fileID: 370229399547083006}
   - component: {fileID: 5764401313820145851}
+  - component: {fileID: 303817044914440806}
   m_Layer: 0
   m_Name: Veh_Van_Green_Z
   m_TagString: Untagged
@@ -273,6 +274,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.4368925, y: 2.6020634, z: 5.6178155}
   m_Center: {x: 0, y: 1.5559858, z: -0.00000023841858}
+--- !u!114 &303817044914440806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd8483d2007f5e488ccf61aff8dcab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 40e53fe8b5743ef418551f6a6e785006, type: 3}
 --- !u!1 &152928
 GameObject:
   m_ObjectHideFlags: 0

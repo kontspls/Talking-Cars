@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 5999198698316541610}
   - component: {fileID: 6835253993682865821}
   - component: {fileID: -4085230365830771727}
+  - component: {fileID: -4577507260905180365}
   m_Layer: 0
   m_Name: Veh_Armor_Car_01
   m_TagString: Untagged
@@ -288,6 +289,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
+--- !u!114 &-4577507260905180365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd8483d2007f5e488ccf61aff8dcab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: ff3b8288fa6208d4d88c193ff201673c, type: 3}
 --- !u!1 &118946
 GameObject:
   m_ObjectHideFlags: 0
