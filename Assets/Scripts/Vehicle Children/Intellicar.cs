@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Intellicar : Vehicle
 {
-    void Update()
+    void LateUpdate()
     {
         if (DialogueManager.GetInstance().dialoguePanel.activeInHierarchy == false)
         {
