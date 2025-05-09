@@ -5,7 +5,7 @@ public class MainManager : MonoBehaviour
 {
     // Start() and Update() methods deleted - we don't need them right now
 
-    public static MainManager Instance { get; private set; }
+    public static MainManager Instance { get; private set; } //ENCAPSULATION
     public GameObject SelectedCar;
     public List<GameObject> cars;
 

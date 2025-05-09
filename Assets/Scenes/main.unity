@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I HATE THIS CAR. THIS CAR SUCKS. BACK TO TITLE SCREEN IMMEDIATELY.
+  m_text: Back to Title Screen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1363,7 +1363,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -25, y: -17}
-  m_SizeDelta: {x: 396.2422, y: 144.95312}
+  m_SizeDelta: {x: 305.0323, y: 101.9542}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1107402204
 MonoBehaviour:

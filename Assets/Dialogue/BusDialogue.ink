@@ -1,18 +1,18 @@
 -> start
 
 === start ===
-"Rumble... I am Big Wheels, the... uh, big bus of the road. You human, yes?"
+"I am Big Wheels, the... uh... bus. You human, yes?"
 
     *["Welp... aren't you a fat mess."]
     -> duel1
 
-    *["I come bearing snacks for the snack-mobile."]
+    *["I come bearing snacks!"]
     -> subservience1
 
-    *["Nice rims—too bad your muffler’s doing the limbo."]
+    *["Nice rims—shame your exhaust can’t keep its posture."]
     -> mockery1
 === duel1 ===
-"Fat mess? I... sit on you now?"
+"Fat? I'm not fat, I'm girthy."
 
      *["Your engine farts louder than my grandpa."]
     -> duel2a
@@ -23,27 +23,27 @@
     *["Your horn sounds like a vuvuzela on helium."]
     -> duel2c
 === duel2a ===
-"Farts… make stink. I make… sitting."
+"I'd like to meet your granpa!"
 -> interaction1
 
 === duel2b ===
-"Pancakes… I like breakfast? You bring syrup?"
+"MMMmmmm... pancakes..."
 -> interaction1
 
 === duel2c ===
-"Vuvuzela! I play lullaby?"
+"Yes... I vuvuzel often.(?!)"
 -> interaction1
 
 === subservience1 ===
 "You bring... gas? Snacks? Maybe... hug?"
 
-    *["Your tank was emptier than your jokes—I filled it."]
+    *["I filled your tank."]
     -> subservience2a
 
-    *["Your seats were grosser than swamp mud—I scrubbed."]
+    *["I scrubbed your seats."]
     -> subservience2b
 
-    *["Your wipers stuck—I lubricated with soda."]
+    *["I lubricated your wipers with soda."]
     -> subservience2c
 
 === subservience2a ===
@@ -59,23 +59,23 @@
 -> interaction1
 
 === mockery1 ===
-"Limbo muffler… it’s my snack chute!"
+"Posture? I have much posture!"
 
-    *["Snack chute? More like a stinky sock."]
+    *["Sure you do, you form of public transportation."]
     -> mockery2a
 
-    *["Looks like someone sneezed grease there."]
+    *["Looks like someone has trouble with words."]
     -> mockery2b
 
     *["That droop’s so sad it needs therapy."]
     -> mockery2c
 
 === mockery2a ===
-"Sock… wear on feet? I wear on wheels?"
+"Yes! Yes I do! I publicly transport!"
 -> interaction1
 
 === mockery2b ===
-"Sneeze… allergic to dust? I sneezed gears."
+"I have the best words."
 -> interaction1
 
 === mockery2c ===
@@ -94,15 +94,15 @@
 -> interaction2b
 
 === interaction2a ===
-"Blind squirrels… find nuts? I find roads?"
+"Squirrels are my best friends!"
 -> interaction3a
 
 === interaction2b ===
-"Arm wrestle… tiring. I bring… gummy bears?"
+"Tricycles are scary..."
 -> interaction3b
 
 === interaction2c ===
-"Backward… is front’s awkward cousin?"
+"STOP BULLYING ME!"
 -> interaction3c
 
 === interaction3a ===
@@ -112,30 +112,30 @@
 
 === interaction3b ===
 
-    *["You're just a metal lunchbox."]
+    *["You're pretty timid. I like you."]
     -> final2
 
 === interaction3c ===
-
     *["Let's park and eat glue."]
     -> final3
 
 === final1 ===
-"Hamsters... cute wheels..."
+"Hamsters and squirrels! Yay!"
 -> finalinteraction
 
 === final2 ===
-"Lunchboxes... have sandwiches..."
+"I LIKE YOU TOO!"
 -> finalinteraction
 
 === final3 ===
-"Glue... sticky... careful teeth..."
+"I like glue!"
 -> finalinteraction
 
 === finalinteraction ===
-+["Whatever, grease-brain."]
++["*Sigh* Okay, dum dum, we're friends now."]
 ->exit
 
 === exit ===
-"I go hibernate… dream of roundabouts…"
+"Yaaaay! Friend!"
++["Public transportation is gud."]
 -> END

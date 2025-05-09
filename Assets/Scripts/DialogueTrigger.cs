@@ -9,9 +9,4 @@ public class DialogueTrigger : MonoBehaviour
     {
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
     }
-
-    private void Update() 
-    {   
-
-    }
 }

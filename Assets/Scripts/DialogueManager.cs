@@ -1,19 +1,16 @@
-using Ink.Runtime;
+ï»¿using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using System.Transactions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
     private static DialogueManager Instance;
 
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
+    public GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
     [Header("Choices UI")]
@@ -62,10 +59,6 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-
-            ContinueStory();
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -76,14 +69,15 @@ public class DialogueManager : MonoBehaviour
 
         ContinueStory();
     }
-    private void ExitDialogueMode()
+    public void ExitDialogueMode()
     {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
     } 
 
-    private void ContinueStory()
+    public void ContinueStory()
     {
         if (currentStory.canContinue)
         {
@@ -101,12 +95,6 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if (currentChoices.Count > choices.Length)
-        {
-            Debug.LogError("More choices given than what the UI can support. Number of choices given: "
-                + currentChoices.Count);
-        }
-
         int index = 0;
         foreach (Choice choice in currentChoices)
         {
@@ -119,6 +107,11 @@ public class DialogueManager : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
         StartCoroutine(SelectFirstChoice());
+
+        if (!currentStory.canContinue && currentChoices.Count == 0)
+        {
+            ExitDialogueMode();
+        }
     }
     private IEnumerator SelectFirstChoice()
     {
@@ -131,17 +124,19 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
 
-        // If there’s another branch ahead, skip straight to it…
-        if (currentStory.canContinue && currentStory.currentChoices.Count == 0)
-        {
+    if (currentStory.canContinue)
+    {
+        if (currentStory.currentChoices.Count == 0)
             dialogueText.text = currentStory.ContinueMaximally();
-        }
         else
-        {
-            // Otherwise just do one step so we don’t overshoot
             dialogueText.text = currentStory.Continue();
-        }
 
         DisplayChoices();
+    }
+    else
+        {
+        ExitDialogueMode();
+        return;
+        }
     }
 }

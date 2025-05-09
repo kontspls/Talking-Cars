@@ -8,6 +8,5 @@ public class SpawnManager : MonoBehaviour
     {
         car = MainManager.Instance.SelectedCar;
         Instantiate(car);
-
     }
 }

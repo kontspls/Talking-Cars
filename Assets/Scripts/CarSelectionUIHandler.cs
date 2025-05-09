@@ -6,11 +6,11 @@ using System.Collections.Generic;
 
 public class CarSelectionUIHandler : MonoBehaviour
 {
-    [SerializeField] private Button fatButton;
+    [SerializeField] private Button fatButton; //ENCAPSULATION
     [SerializeField] private Button intelligentButton;
     [SerializeField] private Button kindButton;
 
-    public List<GameObject> cars;
+    private List<GameObject> cars;
     private int selectedIndex;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

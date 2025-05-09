@@ -1,8 +1,5 @@
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class ChangeCars : MonoBehaviour

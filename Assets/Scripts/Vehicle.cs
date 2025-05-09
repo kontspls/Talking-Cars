@@ -2,34 +2,40 @@ using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
-    private Rigidbody rb;
-    private int forceStrenght;
-    [SerializeField] protected ParticleSystem explosion;
+    protected Rigidbody rb;
+    protected AudioSource carAudio;
 
+    [SerializeField] protected ParticleSystem explosion;
+    [SerializeField] protected AudioClip fallSound;
+    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-    protected virtual void Spawn()
-    {
-        Instantiate(gameObject);
-    }
-
-    protected virtual void Talk()
-    {
-        
+        carAudio = GetComponent<AudioSource>();
     }
     
-    protected void Jump()
+    protected virtual void ExitStage() //Method Overloading 
     {
-        rb.AddForce(Vector3.up * Time.deltaTime * forceStrenght, ForceMode.Force);
-    }
+        // spawn an instance in the world
+        var instance = Instantiate(
+            explosion,
+            transform.position,
+            transform.rotation
+        );
+        instance.Play();
 
-    protected void Explode()
-    {
+        // destroy the vehicle immediately
         Destroy(gameObject);
-        explosion.Play();    
+
+        // schedule the particles to clean themselves up
+        float life = instance.main.duration
+                   + instance.main.startLifetime.constantMax;
+        Destroy(instance.gameObject, life);
     }
 
+    protected void OnCollisionEnter(Collision collision)
+    {
+        carAudio.PlayOneShot(fallSound, 1.0f);
+    }
 }

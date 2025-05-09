@@ -105,4 +105,5 @@
 “I’m glad, dear. Remember, I’m always here when you need a caring ride. 
 <br>
 Take care now, darling. May your path be smooth and your heart at ease.”
+*["I love you too, mum."]
 -> END

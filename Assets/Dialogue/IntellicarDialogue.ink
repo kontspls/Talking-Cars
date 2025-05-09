@@ -140,4 +140,5 @@
 
 === exit ===
 “I will enter standby mode—awaiting further intellectual engagement.”
+*["You're unbearable. Bye."]
 -> END

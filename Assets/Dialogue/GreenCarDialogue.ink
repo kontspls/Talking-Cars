@@ -102,4 +102,5 @@
 "You’ve got this, partner. When life hits hard, just remember—you’re harder. I'm always in your corner. 
 <br>
 Drive safe, friend. The road ahead’s waiting, and you’re more than ready."
+*["Thanks man, I appreciate it."]
 -> END
