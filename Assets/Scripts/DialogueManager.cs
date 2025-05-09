@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour
 {
     private static DialogueManager Instance;
-
+    //Encapsulation
     [Header("Dialogue UI")]
     public GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;

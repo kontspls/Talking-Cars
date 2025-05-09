@@ -135,10 +135,10 @@
 -> finalinteraction
 
 === finalinteraction ===
-+["Shall I compute your next insult?"]
++[“I admire your confidence; it’s almost convincing.”]
 ->exit
 
 === exit ===
-“I will enter standby mode—awaiting further intellectual engagement.”
+“I will enter standby mode—awaiting further intellectual engagement, even though intellect seems to be your weak point.”
 *["You're unbearable. Bye."]
 -> END

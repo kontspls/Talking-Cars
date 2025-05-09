@@ -14,9 +14,7 @@ public class Tank : Vehicle
     {
         if (DialogueManager.GetInstance().dialoguePanel.activeInHierarchy == false)
         {
-            ExitStage();
+            ExitStage(); //INHERITANCE
         }
-
-
     }
 }

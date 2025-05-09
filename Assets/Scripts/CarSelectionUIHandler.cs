@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class CarSelectionUIHandler : MonoBehaviour
 {
-    [SerializeField] private Button fatButton; //ENCAPSULATION
+    [SerializeField] private Button fatButton; 
     [SerializeField] private Button intelligentButton;
     [SerializeField] private Button kindButton;
 

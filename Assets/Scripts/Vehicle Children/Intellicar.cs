@@ -12,7 +12,7 @@ public class Intellicar : Vehicle
     protected override void ExitStage()
     {
 
-        rb.AddForce(Vector3.up * Time.deltaTime * 10000000, ForceMode.Force);
+        rb.AddForce(Vector3.up * Time.deltaTime * 10000000, ForceMode.Force); //POLYMORPHISM
         float angleThisFrame = 90f * Time.deltaTime;
         transform.Rotate(Vector3.up * angleThisFrame, Space.Self);
     }

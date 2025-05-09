@@ -12,7 +12,7 @@ public class Bus : Vehicle
     protected override void ExitStage()
     {
 
-        rb.AddForce(Vector3.up * Time.deltaTime * 550, ForceMode.Acceleration);
+        rb.AddForce(Vector3.up * Time.deltaTime * 550, ForceMode.Acceleration); //POLYMORPHISM
         float angleThisFrame = 360f * Time.deltaTime;
         transform.Rotate(Vector3.up * angleThisFrame, Space.Self);
     }

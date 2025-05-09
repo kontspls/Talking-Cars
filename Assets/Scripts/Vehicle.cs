@@ -15,7 +15,7 @@ public class Vehicle : MonoBehaviour
         carAudio = GetComponent<AudioSource>();
     }
     
-    protected virtual void ExitStage() //Method Overloading 
+    protected virtual void ExitStage() //METHOD OVERIDING IN CHILDREN//INHERITANCE-POLYMORPHISM-ABSTRACTION
     {
         // spawn an instance in the world
         var instance = Instantiate(
